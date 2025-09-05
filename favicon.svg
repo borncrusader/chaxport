@@ -1,0 +1,33 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for 3D gold ring effect -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#B8860B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DAA520;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Inner shadow gradient for depth -->
+    <radialGradient id="innerShadow" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#333;stop-opacity:0" />
+      <stop offset="70%" style="stop-color:#000;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#000;stop-opacity:0.6" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Black background circle -->
+  <circle cx="16" cy="16" r="16" fill="#000000"/>
+  
+  <!-- Gold ring with 3D effect -->
+  <circle cx="16" cy="16" r="15" fill="none" stroke="url(#goldGradient)" stroke-width="2"/>
+  
+  <!-- Inner shadow for depth -->
+  <circle cx="16" cy="16" r="13" fill="url(#innerShadow)"/>
+  
+  <!-- Letter C (white) - left side -->
+  <text x="6" y="21" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">C</text>
+  
+  <!-- Letter x (red) - right side -->
+  <text x="20" y="21" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FF0000">x</text>
+</svg>
