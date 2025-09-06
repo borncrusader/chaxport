@@ -2,6 +2,7 @@ console.log('Chaxport content script loaded on claude.ai');
 
 let originalBodyContent = null;
 let isExportView = false;
+let escKeyHandler = null;
 
 function getContent() {
     // Get title from header div.truncate
@@ -79,6 +80,7 @@ function toggleExportView() {
         // Restore original content
         if (originalBodyContent) {
             document.body.innerHTML = originalBodyContent;
+            removeEscKeyListener();
             isExportView = false;
         }
     }
@@ -114,6 +116,25 @@ function showExportView() {
     `;
     
     document.body.innerHTML = exportHTML;
+    
+    // Add Esc key listener to revert back to original DOM
+    addEscKeyListener();
+}
+
+function addEscKeyListener() {
+    escKeyHandler = function(event) {
+        if (event.key === 'Escape' && isExportView) {
+            toggleExportView();
+        }
+    };
+    document.addEventListener('keydown', escKeyHandler);
+}
+
+function removeEscKeyListener() {
+    if (escKeyHandler) {
+        document.removeEventListener('keydown', escKeyHandler);
+        escKeyHandler = null;
+    }
 }
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
