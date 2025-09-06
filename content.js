@@ -66,10 +66,6 @@ function getContent() {
     };
 }
 
-function getAllVisibleText() {
-    return document.body.textContent?.trim() || '';
-}
-
 function toggleExportView() {
     if (!isExportView) {
         // Store original content and show export view
@@ -146,5 +142,4 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 window.chaxport = {
     getContent: getContent,
-    getAllVisibleText: getAllVisibleText
 };
