@@ -26,10 +26,7 @@ A Chrome extension that cleans your Claude.ai conversation responses and exports
 
 ## How it Works
 
-<video width="600" controls>
-  <source src="video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Watch the video](https://github.com/user-attachments/assets/d95f01ee-68b5-4810-8402-9fa9631979c5)
 
 The extension works by:
 
