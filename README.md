@@ -1,11 +1,12 @@
 # Chaxport
 
-A Chrome extension that cleans your Claude.ai conversation responses and exports them to PDF via the browser.
+A Chrome extension that cleans your Claude.ai conversation responses and exports them to PDF or JSON via the browser.
 
 ## Features
 
 - **Clean Export View**: Toggle between the original Claude.ai interface and a clean, print-friendly view
 - **PDF Export**: Use your browser's print function to save conversations as PDF
+- **JSON Export**: Export conversations as JSON for programmatic use and archival
 - **Keyboard Navigation**: Press `Esc` to quickly return to the original Claude.ai view
 - **Conversation Formatting**: Clean formatting with distinct styling for human and Claude messages
 
@@ -43,5 +44,6 @@ The extension works by:
 
 ## Version History
 
+- **v3.0**: Added JSON export support
 - **v2.0**: Added Esc key functionality to revert to original DOM
 - **v1.0**: Initial release with export view toggle
