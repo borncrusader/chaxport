@@ -137,7 +137,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === 'toggleExportView') {
         toggleExportView();
         sendResponse({success: true});
+    } else if (request.action === 'getState') {
+        sendResponse({isExportView: isExportView});
     }
+    return true;
 });
 
 window.chaxport = {

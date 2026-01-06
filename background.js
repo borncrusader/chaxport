@@ -1,14 +1,4 @@
-chrome.action.onClicked.addListener((tab) => {
-    const allowedSites = ['claude.ai'];
-    if (allowedSites.some(site => tab.url.includes(site))) {
-        chrome.tabs.sendMessage(tab.id, {action: 'toggleExportView'}, function(response) {
-            if (chrome.runtime.lastError) {
-                console.log('Content script not ready:', chrome.runtime.lastError.message);
-                return;
-            }
-            if (response && response.success) {
-                console.log('Toggled export view');
-            }
-        });
-    }
-});
+// Background script for Chaxport
+// The popup now handles the user interaction, so this file is kept minimal
+// You can add additional background tasks here if needed in the future
+console.log('Chaxport background service worker loaded');
