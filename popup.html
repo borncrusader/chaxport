@@ -16,7 +16,7 @@
             color: #333;
         }
 
-        #exportButton {
+        button {
             width: 100%;
             padding: 12px;
             background-color: #3b82f6;
@@ -26,10 +26,15 @@
             font-size: 14px;
             cursor: pointer;
             font-weight: 500;
+            margin-bottom: 10px;
         }
 
-        #exportButton:hover {
+        button:hover {
             background-color: #2563eb;
+        }
+
+        button:last-child {
+            margin-bottom: 0;
         }
 
         #notSupported {
@@ -47,7 +52,13 @@
 <body>
     <h2>Chaxport</h2>
     <div id="supportedSite" class="hidden">
-        <button id="exportButton">Print View</button>
+        <div id="viewOptions">
+            <button id="exportButton">Print View</button>
+            <button id="jsonButton">JSON View</button>
+        </div>
+        <div id="revertContainer" class="hidden">
+            <button id="revertButton">Revert</button>
+        </div>
     </div>
     <div id="notSupported" class="hidden">
         This site is not supported. Chaxport currently only works on claude.ai.
