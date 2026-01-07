@@ -1,0 +1,23 @@
+{
+  "name": "chaxport",
+  "version": "4.0.0",
+  "description": "A Chrome extension that cleans your Claude.ai conversation responses and exports them to PDF or JSON",
+  "type": "module",
+  "scripts": {
+    "build": "bun run build:ts && bun run build:copy-assets",
+    "build:ts": "bun build src/background.ts --outdir dist --target=browser --minify && bun build src/popup.ts --outdir dist --target=browser --minify && bun build src/content.ts --outdir dist --target=browser --minify",
+    "build:copy-assets": "cp src/popup.html dist/popup.html && cp public/manifest.json dist/manifest.json && cp public/icons/* dist/",
+    "dev": "bun run build:ts && bun run build:copy-assets",
+    "watch": "bun run dev",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "icons": "make icongen"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.254",
+    "typescript": "^5.3.3"
+  },
+  "keywords": ["chrome-extension", "claude-ai", "export", "pdf", "json"],
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE.md"
+}

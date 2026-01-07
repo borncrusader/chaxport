@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Chaxport",
-  "version": "3.0",
+  "version": "4.0",
   "description": "Clean your claude.ai responses and export to PDF or JSON via the browser",
   "icons": {
     "16": "icon-16.png",
